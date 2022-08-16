@@ -1,2 +1,2 @@
 # playlist
- Playlist com JavaScript
+ Playlist musical com JavaScript
