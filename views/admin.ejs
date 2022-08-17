@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css%22%3E" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css%22%3E"
+    />
     <title>Playklist</title>
   </head>
 
@@ -41,7 +44,7 @@
       </form>
     </section>
 
-<section id="player">
+    <section id="player">
       <h2>Gerenciar Músicas</h2>
 
       <div>
@@ -64,7 +67,7 @@
               <td><%= music.name %></td>
               <td><%= music.author %></td>
               <td id="actions">
-                <a id="edit" href="">Editar</a>
+                <a id="edit" href="/by/<%= music._id %>">Editar</a>
                 <a id="delete" href="">Apagar</a>
               </td>
             </tr>
@@ -73,5 +76,11 @@
         </table>
       </div>
     </section>
+
+    <!-- <% if (music != null) { %> -->
+    <section id="modal">
+      <h2>Editar Música</h2>
+    </section>
+    <!-- <% } %> -->
   </body>
 </html>

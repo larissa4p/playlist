@@ -6,6 +6,7 @@ const Music = require("./model/Music");
 
 const app = express();
 const port = process.env.PORT || 3000;
+let music = null;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/public")));
@@ -27,6 +28,13 @@ app.post("/create", async (req, res) => {
   const music = req.body;
   await Music.create(music);
   res.redirect("/");
+});
+
+app.get("/by/:id", async (req, res) => {
+  const { id } = req.params;
+  music = await Music.findById({ _id: id });
+  const playlist = await Music.find();
+  res.render("admin", { playlist, music });
 });
 
 app.listen(port, () =>
