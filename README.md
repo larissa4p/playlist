@@ -1,2 +1,2 @@
 # playlist
- Playlist musical com JavaScript
+ Playlist musical com JavaScript, MongoDB e Bootstrap
